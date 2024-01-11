@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sve">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolånekalkylator</title>
+</head>
+<body>
+    <h1>Räkna ut vad ditt lån kommer att kosta under angiven tid:</h1>
+    <div class="main">
+        <label for="money">Lånebelopp</label>
+        <input type="text" placeholder="Tex 200 000kr" id="money" >
+        <label for="interest">Räntesats:</label>
+        <input type="text" placeholder="Tex 4%" id="interest">
+        <label for="time">Lånetid (år):</label>
+        <input type="text" placeholder="Tex 20år" id="duration">
+        <button id="calculate">Kalkylera</button>
+    </div>
+    <br>
+    <br>
+    <div id="result">
+    </div>
+    <div id="errorResult">
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
