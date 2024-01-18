@@ -33,8 +33,10 @@ function CalculateLoan() {
     let monthlyPayment = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
     // Round it so we don't get too many digits
     monthlyPayment = Math.round(monthlyPayment);
+    // Calculate total cost of interest
+    let totalInterest = monthlyPayment * N - P;
     // Present the overall result for the user
-    printResult.innerHTML = `Lånebelopp: ${money}kr<br>Ränta: ${interest}%<br>Månadskostnad: ${monthlyPayment.toFixed(2)}kr`;
+    printResult.innerHTML = `Lånebelopp: ${money}kr<br>Ränta: ${interest}%<br>Månadskostnad: ${monthlyPayment.toFixed(2)}kr<br>Total räntekostnad: ${totalInterest.toFixed(2)}kr`;
 }
 // Attach the function to the button so it runs on click
 calculateBtn.addEventListener("click", CalculateLoan);
